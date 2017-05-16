@@ -1,0 +1,8 @@
+<h1>Title:<%= @listing.title%></h1>
+<div>Posted by: <%= @listing.user_id %></div>
+<h1>Price:<%= @listing.price%></h1>
+<h1>Place:<%= @listing.place %></h1>
+<%= link_to "Edit", edit_listing_path(@listing) %>
+<%= render "reservations/form", listing: @listing %>
+
+<%= link_to "Make Payment", braintree_new_path %>

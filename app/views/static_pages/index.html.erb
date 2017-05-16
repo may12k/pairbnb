@@ -1,0 +1,12 @@
+<h1>Welcome</h1>
+<% if !signed_in? %>
+<%= link_to "Sign in with Facebook", "/auth/facebook" %>
+<% end %>
+
+ <!-- "/users/#{current_user.id}/listings/new" -->
+<% Listing.all.each do |listing| %>
+ 				<tr>
+ 					<td><%= listing.title %></td>
+ 					<td> <a href=<%= "listings/#{listing.id}" %>><%= listing.id %></a></td>
+ 				</tr>
+ 			<% end %>

@@ -1,0 +1,16 @@
+
+<%= form_for [listing, Reservation.new] do |f| %>
+  <p class="form-group field">
+    <%= f.label :start_date, class: "control-label" %>
+    <%= f.date_field :start_date, class: "form-control" %>
+  </p>
+  <p class="form-group field">
+    <%= f.label :end_date, class: "control-label" %>
+    <%= f.date_field :end_date, class: "form-control" %>
+  </p>
+  <p class="form-group field">
+    <%= f.label :number_of_guests, class: "control-label" %>
+    <%= f.number_field :number_of_guests, class: "form-control" %>
+  </p>
+  <%= f.submit "Submit Reservation"%>
+<% end %>
